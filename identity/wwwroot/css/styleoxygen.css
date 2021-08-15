@@ -1,0 +1,300 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family:alfa ;
+    src: url(BebasNeue.otf);
+}
+@font-face {
+    font-family:bon ;
+    src: url("Jenine-SemiBold.otf");
+}
+/* start header */
+main header {
+    max-width: 100%;
+    /*background-image: url('~\images\3.jpg');*/
+    background-image: url('~/images/3.jpg');
+    /*background-image: url("3.jpg");*/
+    background-size: 100% 100%;
+    height: 600px;
+}
+.section1{
+    background-color: black;
+    opacity: 0.6;
+    background-size: 100% 100%;
+    height:600px;
+}
+header h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3;
+    color: #fff;
+    z-index: 999;
+    margin-top: -300px;
+    position: absolute;
+    text-shadow:0px 0px 10px #fff ;
+    width: 100%;
+
+}
+header h4{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2;
+    color: #fff;
+    z-index: 999;
+    margin-top: -230px;
+    position: absolute;
+ 
+    width: 100%;
+    text-shadow:0px 0px 10px #fff ;
+
+}
+header #nav {
+    background-size: 100% 100%;
+    background-color: #0c0e10!important;
+    box-shadow:0px 0px 10px #000000ad;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+
+}
+#brand {
+    color: rgb(255 254 254 / 90%);
+}
+#ul {
+    margin-left: 400px;
+}
+#ul li a{
+    color: #fff;
+    font-size: 1.3rem;
+    margin-left: 50px;
+   
+ 
+}
+.navbar-light .navbar-toggler {
+    background-color: #ffff;
+}
+/* end header */
+/* start section2 */
+.pop {
+    /*background-image: url("2.jpg");*/
+    background-image: url('~/images/2.jpg');
+    width: 100%;
+    height: 500px;
+    box-shadow: 0px 0px 15px rgb(112, 108, 108);
+    border-radius: 8px;
+    margin-top: 50px;
+    position: relative;
+}
+img, svg {
+    max-width: 50%;
+    /* margin-left: 170px; */
+  
+}
+.pop h2{
+    font-family: alfa;
+    text-align: center;
+    padding-top:15px;
+  
+}
+.pop .text{
+    margin-top: -200px;
+}
+.pop .text h3{
+    font-family: alfa;
+    text-align: center;
+    color: #000;
+    font-size:0.7rem;
+    margin-left: 65px;
+    width: 100%;
+    font-weight: 900;
+}
+/* end section2 */
+/* start section3 */
+.section3 .parent  .child{
+    background-color: #fff;
+    box-shadow: 0px 0px 15px rgb(112 108 108);
+    max-width: 100%;
+    width: 100%;
+    height: 140px;
+    border-radius: 30%;
+    margin-top: 20px;
+    position: relative;
+    padding-top: 20px;
+}
+.section3 .parent  .child img{
+    width: 100px;
+    height: 100px;
+    margin-left:15px;
+position: absolute;
+border-radius: 50%;
+}
+.section3 .parent .child p{
+    font-size: 0.6rem;
+text-align: center;
+margin-left: 120px;
+padding-top: 10px;
+margin-top: 20px;
+line-height: 0px;
+font-weight: 500;
+
+}
+.section3 .parent .child a{  
+text-align: center;
+margin-left: 210px;
+padding-top: 10px;
+text-decoration: none;
+}
+.section3{
+    display: flex;
+    justify-content:space-around;
+   flex-wrap: wrap;
+}
+.section3 aside{
+    margin-left: 150px;
+    margin-top: 80px;
+
+}
+.section3 aside img{
+    margin-left: -80px;
+    max-width: 100%;
+    width: 400px;
+}
+/* end section3 */
+/* start section4 */
+.section4{
+    background-color: #000;
+    background-size: 100% 100%;
+      height: 70px;  
+    margin-top: 50px;
+    
+}
+.section4 ul{
+    /* margin-left: 860px;
+    line-height: 70px; */
+    line-height: 20px;
+  
+}
+.section4 ul li{
+    display: inline-block;
+    margin-left: 30px;
+    padding-top: 10px;
+}
+.section4 ul li a{
+  color: #000;
+  font-size: 1.5rem;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 50px;
+}
+.section4 ul li a:hover{
+    background-color: darkorange;
+}
+.section4 h2,h3{
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color: #fff;
+    font-family:alfa;
+    text-align: center;
+    display:inline-block;
+}
+
+/* end section4 */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    
+   
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    .pop{
+        max-width: 60%;
+        width: 60%;
+        margin-left: 150px;
+        }
+        .section3 .parent .child{
+            /* margin-left: 100px; */
+            max-width: 70%;
+            width: 70%;
+        }
+        .pop .text h3{
+         
+            font-size:0.9rem;
+            margin-left: 70px;
+           
+        }
+        .section3 .parent .child p{
+            font-size: 0.6rem;
+        }
+        .section3 .parent .child{
+            max-width: 100%;
+            width: 450px;
+        }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .pop{
+        max-width: 40%;
+        width: 40%;
+        margin-left: 320px;
+        }
+        .section3 .parent .child{
+            max-width: 100%;
+            width: 500px;
+        }
+        .pop{
+            font-size:0.9rem;
+            margin-left:390px;
+            width: 100%;
+            font-weight: 900;
+        }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+     
+    .pop{
+        max-width: 40%;
+        width: 40%;
+        margin-left: 400px;
+        }
+        img, svg {
+    
+            /* margin-left: 270px; */
+          
+        }
+        .section3 aside{
+        max-width: 100%;
+        width: 700px;
+        margin-left: 150px;
+        margin-top: 100px;
+        }
+        .section3 .parent .child{
+            max-width: 100%;
+            width: 650px;
+            margin-top: 50px;
+            margin-left: -100px;
+        }
+        .pop{
+            height: 450px;
+            width: 30%;
+        }
+        .pop .text h3{
+font-size: 0.9rem;
+        }
+        .carousel-inner {
+            /* margin-left: 100px; */
+        }
+        .section3 .parent .child p{
+            font-size: 0.8rem;
+        }
+}

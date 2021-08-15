@@ -1,0 +1,38 @@
+﻿@model List<identity.Models.BloodBank>
+@{
+    ViewData["Title"] = "index";
+}
+
+<a class="btn btn-dark text-white" asp-action="create">Add New Service</a>
+<table class="table table-striped mt-4">
+    <thead class="bg-primary text-white">
+        <tr class="bg-primary text-white">
+            <th>BloodType</th>
+            <th>BloodCost</th>
+            <th>PhoneNumber</th>
+            <th>Address</th>
+            <th>Description</th>
+            <th>          </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.BloodType</td>
+                <td>@item.BloodCost</td>
+                <td>@item.BloodPhone</td>
+                <td>@item.BloodLocation</td>
+
+                <td>@item.BloodDescription</td>
+
+                <td>
+                    @Html.ActionLink("Delete", "delete", new { id = item.BloodId }, new { @class = "btn btn-danger text-white", onclick = "return confirm('Are you sure Delete Service?')" })
+                    @Html.ActionLink("Edit", "edit", new { id = item.BloodId }, new { @class = "btn btn-outline-primary  text-black-50" })
+
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

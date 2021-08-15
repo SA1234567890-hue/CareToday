@@ -1,0 +1,194 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>أنابيب أكسجين</title>
+    <!-- Main Template CSS File -->
+    @*<link rel="stylesheet" href="css/css.css" />*@
+    <link href="~/css/oxygen.css" rel="stylesheet" />
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="~/css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=Vibes&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Start Header -->
+    <div class="header">
+        <div class="container">
+                <img class="logo" src="~/images/oxygen/logo1.png" alt="" />
+            
+            <!--<!-- ------------------------------dropdownlist------------------------------------ -->
+            <div class="input-group justify-content-center search1">
+                <div class="row flex-row-reverse">
+                    @RenderBody()
+
+                </div>
+            </div>
+            @*@await RenderSectionAsync("dropdown", required: false)*@
+
+            <!-- ---------------------------------------------------------------------------------- -->
+            <div class="links">
+                <span class="icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <ul>
+                    <li><a href="#services">معلومات تهمك</a></li>
+                    <li><a href="#portfolio">جهود الدولة</a></li>
+
+                    <li><a href="#contact">التواصل معنا</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!-- End Header -->
+    <!-------------------------------------- ------------------------------------------------------->
+    <div style=" margin:auto;text-align:center;justify-content:center ">
+        @await RenderSectionAsync("data", required: false)
+    </div>
+    <!-------------------------------------- ------------------------------------------------------->
+    <!-- Start Landing Section -->
+    <div class="landing">
+
+    </div>
+    <!-- End Landing Section -->
+    <!-- Start Services -->
+    <div class="services" id="services">
+        <div class="container">
+            <h2 class="special-heading">معلومات تهمك</h2>
+            <div class="services-content">
+                <div class="col">
+                    <!-- Start Service -->
+                    <div class="srv">
+                        <i class="fas fa-thumbtack"></i>
+                        <div class="text">
+                            <h3>توصيل أنبوبة الأكسجين</h3>
+                            <p>
+                                - يتم توصيل المنظم بالأسطوانة <br> - يتم استخدام مفك الأسطوانة المصاحب لها فقط <br> - التأكد من ان نظام الصمامات يخلوا من أى مخلفات او زيوت
+                            </p>
+                        </div>
+                    </div>
+                    <div class="srv">
+                        <i class="fas fa-thumbtack"></i>
+                        <div class="text">
+                            <h3>تركيب أنبوبة الأكسجين</h3>
+                            <p>
+                                - يتم توصيل المنظم بالاسطوانة الممتلئة <br> - يتم التوفيق بين المسامير الخاصة بالمنظم والثقوب الموجودة <br>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End Service -->
+                </div>
+                <div class="col">
+                    <!-- Start Services -->
+                    <div class="srv">
+                        <i class="fas fa-thumbtack"></i>
+                        <div class="text">
+                            <h3>نصائح تركيب أنبوبة أكسجين</h3>
+                            <p>
+                                - التأكد من ان نظام الصمامات خالى من أى زيوت او مخلفات <br> - لا يجب استخدام المنظم الذى يفتقر للوردة <br> - اذا كانت حلقة الربط غير موجودة يجب التواصل مع البائع لتوفيره
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End Services -->
+                </div>
+                <div class="col">
+                    <div class="image image-column">
+                        <img src="~/images/oxygen/oxi.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Services -->
+    <!-- Start Portfolio -->
+    <div class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="special-heading">الجهود لمكافحة الوباء</h2>
+            <div class="portfolio-content">
+                <div class="card">
+                    <img src="~/images/oxygen/5.jpg" alt="" />
+                    <div class="info">
+                        <p>
+                            هيئة السكك الحديدية تواصل اتخاذ كافة الإجراءات الاحترازية اللازمة لمواجهة فيروس كورونا حيث تواصل أعمال تطهير كافة القطارات بشكل دوري ومستمر
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="~/images/oxygen/4.jpg" alt="" />
+                    <div class="info">
+                        <p>
+                            شركة الاتحاد العربي للنقل البري إحدى شركات وزراة النقل تواصل جهودها لتطهير كافة الاتوبيسات وتطهير شبابيك التذاكر ضمن الاجراءات الاحترازية
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="https://www.care.gov.eg/EgyptCare/News/Browse.aspx?cid=30" class="anchor">
+                        <img src="~/images/oxygen/angle-double-left-solid.svg" class="left-arrow">
+                        <div class="info">
+                            <p>
+                                تعرف على المزيد من الجهودات
+                            </p>
+                            </div>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- End Portfolio -->
+    <!-- Start About -->
+    <!-- End About -->
+    <!-- Start Contact -->
+    <div class="contact" id="contact">
+        <div class="container">
+            <h2 class="special-heading">التواصل مـــعنا</h2>
+            <div class="info">
+                <p class="label"> يمكنكم التواصل عبر الهاتف الخاص بنا وكذلك الإيميل التالى وعبر صفحاتنا على مواقع التواصل الإجتماعى المختلفه</p>
+                <a href="mailto:care2day@mail.com?subject=Contact" class="link">care2day@mail.com</a>
+                <hr>
+                <i class="fas fa-phone-volume"><span>         </span>01091645763 - 01554327255</i>
+                <div class="social">
+                    <a href="https://www.facebook.com/" target="_blanck"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/" target="_blanck"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.twitter.com/" target="_blanck"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact -->
+    <!-- Start Footer -->
+    <div class="footer"> <span>جميع الحقوق محفوظة <br></span>Care2Day 2021&copy; </div>
+    <!-- End Footer -->
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

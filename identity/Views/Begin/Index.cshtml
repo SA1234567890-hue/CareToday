@@ -1,0 +1,157 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html dir="rtl" lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="~/css/Home.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <title>Care To Day</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-container">
+            <nav>
+                <h3 class="logo">Care To Day</h3>
+                <ul>
+                    <li><a target="_black" href="./index.html">الصفحة الرئيسية</a></li>
+                    <li><a href="#aboutus">من نحن</a></li>
+                    <li><a href="#contactus">تواصل معنا</a></li>
+                    <li><a href="/Identity/Account/Register" >Register </a></li>
+                    <li><a href="/Identity/Account/Login" >Login </a></li>
+                    <li><a href="/home/index" >Admin </a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hero">
+            <div class="content" style="position: relative;">
+                <div class="sliderOverlay">
+                    <button id='rightBtn'>&#10094;</button>
+                    <button id='leftBtn'>&#10095;</button>
+                </div>
+
+                <ul id="myslider">
+
+                    <li style="position: relative;">
+                        <img src="~/images/home/slider1.jpg" style="position: relative" />
+                        <div style="transform: translate(-50%);     position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        z-index: 9999;
+                    ">
+                            <h1>موقع <span>بنك الدم </span>يرحب بكم</h1>
+                            <a href="/bloodbank/dropgov" target="_blank" class="btn">إذهب الأن</a>
+
+                        </div>
+                    </li>
+                    <li style="position: relative;">
+                        <img src="~/images/home/slider2.jpg" style="position: relative" />
+                        <div style="transform: translate(-50%);     position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        z-index: 9999;
+                    ">
+                            <h1> موقع <span>حضانات مصر </span>يرحب بكم</h1>
+                            <a href="/Nursery/gdrop" target="_blank" class="btn">إذهب الأن</a>
+                        </div>
+                    </li>
+                    <li style="position: relative;">
+                        <img src="~/images/home/slider3.jpg" style="position: relative" />
+                        <div style="transform: translate(-50%);     position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        z-index: 9999;
+                    ">
+                            <h1> موقع <span>أنابيب الأكسجين </span>يرحب بكم</h1>
+                            <a href="/oxygens/govdrop" target="_blank" class="btn">إذهب الأن</a>
+                        </div>
+                    </li>
+                    <li style="position: relative;">
+                        <img src="~/images/home/background.jpg" style="position: relative" />
+                        <div style="transform: translate(-50%);     position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        z-index: 9999;
+                    ">
+                            <h1> موقع<span>Care To Day</span>يرحب بكم</h1>
+                            <a href="#qualities" class="btn">إعرف أكثر عنا</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+        <section id="qualities">
+            <h2>ماذا نقدم لكم؟</h2>
+            <div class="qualities-container">
+
+                <div class="quality">
+                    <div class="header-container">
+                        <i class="fas fa-baby-carriage"></i>
+                        <h3>حضانات الأطفال</h3>
+                    </div>
+                    <p>
+                        نسهل عليك إيجاد الحضانات التى سيحتاجها طفلك ونسهل عليك الوصل اليها.
+                    </p>
+                </div>
+                <div class="quality">
+                    <div class="header-container">
+                        <i class="fas fa-hand-holding-medical"></i>
+                        <h3>بنك الدم</h3>
+                    </div>
+                    <p>
+                        نسهل عليك إيجاد بنوك الدم للحصول على أكياس الدم بفصائلها المختلفة .
+                    </p>
+                </div>
+                <div class="quality">
+                    <div class="header-container">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>توفير أنابيب الأكسجين</h3>
+                    </div>
+                    <p>
+                        نسهل عليك إيجاد أنابيب الأكسجين التى قد تحتاج إليها فى حالات الكورونا أو الحالات التى تتطلب إستخدام أنابيب الأكسجين.
+                    </p>
+                </div>
+                </div>
+        </section>
+        <div id='aboutus' class="about-container">
+            <section class="about-us">
+                <div class="about-content">
+                    <h2>من نحن؟</h2>
+                    <p>
+                        موقع إلكترونى يوفر خدمات توفير الحضانات وإيجاد بنوك الدم و توفير أنابيب الأكسجين .
+                    </p>
+                </div>
+                <img src="~/images/home/who-are-we.jpg" alt="" />
+            </section>
+
+        </div>
+    </div>
+    <section id="contactus" class="contact-us">
+        <h2>تواصل معنا</h2>
+        <form>
+            <label for="name">اسمك</label>
+            <input type="text" id="name" name="name" />
+            <label for="email">بريدك الالكتروني</label>
+            <input type="email" id="email" name="email" />
+            <label for="msg">رسالتك لنا</label>
+            <textarea name="message" id="msg" cols="30" rows="5"></textarea>
+            <button class="btn" type='submit'>إرسال</button>
+        </form>
+    </section>
+    <footer>
+        <p><span>جميع الحقوق محفوظة <br></span>Care To Day 2021&copy; </p>
+    </footer>
+    
+
+    <script src="~/js/script.js"></script>
+</body>
+
+</html>

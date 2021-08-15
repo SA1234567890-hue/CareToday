@@ -1,0 +1,176 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Load icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    @*<link href="../bootstrap-5.0.1-dist/css/bootstrap.css" rel="stylesheet" />*@
+
+    <!-- <link rel="stylesheet" href="../css/all.min.css"> -->
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/css.css" />
+
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link href="../css/bloodstyle.css" rel="stylesheet" />
+
+    <title>بنك الدم</title>
+</head>
+<body>
+
+    <!-- -------------------------------------------------------------  navbar ---------------------------------------------------------------- -->
+    <nav class=" navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid flex-row-reverse">
+
+            <div class="header flex-row-reverse">
+                <div class="container ">
+                    @*<img src="~/images/blood/logo.jpg" />*@
+                    <img src="~/images/blood/logo.jpg" alt="not fount" class="logo justify-content-end" />
+                    <!-- ------------------------------dropdownlist------------------------------------ -->
+                    <div class="input-group justify-content-center search1">
+                        <div class="row flex-row-reverse">
+                            @RenderBody()
+
+                        </div>
+                    </div>
+                    @*@await RenderSectionAsync("dropdown", required: false)*@
+
+                    <!-- ---------------------------------------------------------------------------------- -->
+
+                    <div class="links">
+                        <span class="icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                        <ul>
+                            <li><a href="#section1">بنك الدم</a></li>
+                            <li><a href="#section2"> فصائل الدم</a></li>
+                            <li><a href="#section3">التبرع بالدم </a></li>
+                            <li><a href="#contact">التواصل معنا</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!--  ---------------------------------------------------data-------------------------------------------------------->
+    <div style=" margin:auto;text-align:center;justify-content:center ">
+        @await RenderSectionAsync("data", required: false)
+
+    </div>
+    <!-- ----------------------------------------------------------------section 1--------------------------------------------------------- -->
+    <div id="totalbody">
+        <div id="section1" class="container-fluid sec1">
+            <div class="row">
+                <div class="col-12 col-md-8 offset-md-3 justify-content-between ">
+                    @*@await RenderSectionAsync("data", required: false)*@
+                </div>
+            </div>
+        </div>
+        <!-- --------------------------------------------------------------section 2----------------------------------------------------- -->
+
+        <div id="section2" class="container sec2">
+            <div class="row">
+                <div class="card" style="width: 18rem;">
+                    @*<img src="~/images/blood/32.jpg" />*@
+                    <img src="~/images/blood/32.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">معلومات عن الدم </h5>
+                        <p class="card-text">يحتوي جسم الإنسان بشكل عام على 4-6 لتر من الدم، والذي يتكون بدوره من مجموعة متنوعة ومختلفة من الخلايا</p>
+                        <a href="https://www.dw.com/ar/%D9%87%D8%B0%D9%87-%D8%A7%D9%84%D8%AD%D9%82%D8%A7%D8%A6%D9%82-%D8%A7%D9%84%D9%85%D9%87%D9%85%D8%A9-%D8%B9%D9%86-%D8%A7%D9%84%D8%AF%D9%85-%D9%84%D8%A7-%D9%8A%D8%B9%D8%B1%D9%81%D9%87%D8%A7-%D8%A7%D9%84%D9%83%D8%AB%D9%8A%D8%B1%D9%88%D9%86/a-19329764" target="_black" class="btn btn-primary"> أقرأ المزيد</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="~/images/blood/19.jpg" class="card-img-top" alt="...">
+                    @*<img src="~/images/blood/19.jpg" />*@
+                    <div class="card-body">
+                        <h5 class="card-title">فصائل الدم</h5>
+                        <p class="card-text"> من المهم جدّا لك أن تعرف نوع وفئة دمك والخصائص المرتبطة به حيث تؤثر فصيلة الدم على عملية التبرع بالدم واختيار المتبرع</p>
+                        <a href="https://www.webteb.com/articles/%D9%81%D8%B5%D8%A7%D8%A6%D9%84-%D8%A7%D9%84%D8%AF%D9%85-%D8%A7%D9%86%D9%88%D8%A7%D8%B9%D9%87%D8%A7-%D9%88%D8%AE%D8%B5%D8%A7%D8%A6%D8%B5%D9%87%D8%A7_19677" target="_black" class="btn btn-primary">أقرأ المزيد </a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="~/images/blood/21.jpg"  class="card-img-top " alt="...">
+                    @*<img src="~/images/blood/21.jpg" />*@
+                    <div class="card-body">
+                        <h5 class="card-title">التبرع بالدم</h5>
+                        <p class="card-text">يتم اختيار المتبرع بالدم من خلال معايير محددة من الفحص الطبي والمخبري والتاريخ المرضي</p>
+                        <br> <a href="http://www2.mans.edu.eg/hospitals/muh/convalescence/blood-donation-info.htm" target="_black" class="btn btn-primary"> أقرأ المزيد</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- --------------------------------------------------------------section 3----------------------------------------------------- -->
+        <div id="section3" class="container-fluid sec3 w-100">
+
+            <div class="sec3_pic">
+
+
+            </div>
+            <div class="row  justify-content-center">
+                <h2 class="">تسجيل بيانات المتبرع بالدم </h2>
+
+                <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="أسم العائلة" aria-label="أسم العائله">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control justify-content-end" placeholder="أسم الشخص" aria-label=" أسم الشخص">
+                </div>
+                <div class="col-12">
+                    <input type="text" class="form-control" placeholder="الرقم القومي" aria-label="الرقم القومي">
+                </div>
+                <div class="col-12">
+                    <input type="email" class="form-control" placeholder="البريد الالكتروني" aria-label="البريد الالكتروني">
+                </div>
+                <div class="col-12">
+                    <input type="password" class="form-control" placeholder="الرقم السري" aria-label=" الرقم السري">
+                </div>
+                <div class="col-12">
+                    <input type="password" class="form-control" placeholder="تأكيد الرقم السر" aria-label=" تأكيد الرقم السر">
+                </div>
+                <div class="col-12 justify-content-center">
+                    <input type="submit" class="btn btn-primary w-25 justify-content-center " value="تسجيل" style="margin-left:150px ;">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------------------------------------------------------------------------------------------------------ -->
+    <!-- Start Footer -->
+    <div id="contact" class="footer"> <span>جميع الحقوق محفوظة <br></span> بنك الدم 2021&copy; </div>
+    <!-- End Footer -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>
+
+
+
+
+
+

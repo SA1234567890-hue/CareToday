@@ -1,0 +1,35 @@
+﻿@model List<identity.Models.Nursery>
+@{
+    ViewData["Title"] = "index";
+}
+<a class="btn btn-dark text-white" asp-action="create">Add New Service</a>
+
+<table class="table table-striped mt-4">
+    <thead class="bg-primary text-white">
+        <tr class="bg-primary text-white">
+<th>NurseryCost</th>
+    <th>PhoneNumber</th>
+    <th>Address</th>
+    <th>Description</th>
+    <th>          </th>
+</tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.NurCost</td>
+                <td>@item.NurPhone</td>
+                <td>@item.NurLocation</td>
+                <td>@item.NurDescription</td>
+               
+                <td>
+                    @Html.ActionLink("Delete", "delete", new { id = item.NurId }, new { @class = "btn btn-danger text-white", onclick = "return confirm('Are you sure Delete Service?')" })
+                    @Html.ActionLink("Edit", "edit", new { id = item.NurId }, new { @class = "btn btn-outline-primary  text-black-50" })
+
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

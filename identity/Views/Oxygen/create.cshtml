@@ -1,0 +1,40 @@
+﻿@model identity.Models.OxygenTube
+@{
+    ViewData["Title"] = "index";
+}
+
+<form method="post">
+    <h4>Create a new account.</h4>
+    <hr />
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        @Html.LabelFor(n => n.OxgnType)
+        @Html.TextBoxFor(n => n.OxgnType, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(n => n.OxgnAmount)
+        @Html.TextBoxFor(n => n.OxgnAmount, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(n => n.OxgnCost)
+        @Html.TextBoxFor(n => n.OxgnCost, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(n => n.OxgnPhone)
+        @Html.TextBoxFor(n => n.OxgnPhone, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(n => n.OxgnLocation)
+        @Html.TextBoxFor(n => n.OxgnLocation, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(n => n.OxgnDescription)
+        @Html.TextBoxFor(n => n.OxgnDescription, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(n => n.CityId)
+        @Html.DropDownListFor(n=>n.CityId,(SelectList)ViewBag.cit,new { @class = "form-control" })
+
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

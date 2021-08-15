@@ -1,0 +1,55 @@
+﻿@model List<identity.Models.OxygenTube>
+    @{
+        ViewData["Title"] = "index";
+    }
+
+    <h1>index</h1>
+    <a class="btn btn-dark text-white" asp-action="create">Add New Service</a>
+    <table class="table table-striped mt-4">
+        <thead class="bg-primary text-white">
+            <tr class="bg-primary text-white">
+                <th>OxygenType</th>
+                <th>OxygenAmount</th>
+                <th>OxygenCost</th>
+                <th>PhoneNumber</th>
+
+                <th>Address</th>
+                <th>Description</th>
+                <th>CityName</th>
+
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.OxgnType</td>
+                <td>@item.OxgnAmount</td>
+                <td>@item.OxgnCost</td>
+                <td>@item.OxgnPhone</td>
+
+                <td>@item.OxgnLocation</td>
+                <td>@item.OxgnDescription</td>
+                @if (item.City == null)
+                {
+                    <td> </td>
+                }
+                else
+                {
+                <td>@item.City.CityName</td>
+                }
+            <td>
+                @Html.ActionLink("Delete", "delete", new { id = item.OxgnId }, new { @class = "btn btn-danger text-white", onclick = "return confirm('Are you sure Delete Service?')" })
+                @Html.ActionLink("Edit", "edit", new { id = item.OxgnId }, new { @class = "btn btn-outline-primary  text-black-50" })
+
+                @*<a class="btn btn-primary text-white" asp-action="delete" asp-route-userId="@item.OxgnId" onclick="return confirm('Are you sure Delete Service?')">Delete</a>*@
+                @*<a class="btn btn-outline-primary text-black-50" asp-action="edit" asp-route-userId="@item.OxgnId">Edit</a>*@
+
+
+            </td>
+            </tr>
+            }
+        </tbody>
+    </table>

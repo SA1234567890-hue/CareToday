@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<div class="search justify-content-end " style="margin: auto; width: 100%; border: 2px solid black">
+    
+    <table class="table table-bordered w-100  justify-content-end">
+        <caption>بنك الدم</caption>
+        <tr class="flex-row align-content-center">
+            <th class="text-center"> رقم التلفون</th>
+            <th class="text-center">فصيله الدم</th>
+            <th class="text-center">   التكلفة</th>
+            <th class="text-center">الموقع    </th>
+            <th class="text-center">المدينة   </th>
+            <th class="text-center">المحافظه</th>
+        </tr>
+        @foreach (var item in (List<BloodBank>)ViewBag.b)
+        {
+            <tr class="flex-row align-content-center">
+                <td class="text-right">@item.BloodPhone</td>
+                <td class="text-right">@item.BloodType</td>
+                <td class="text-right">@item.BloodCost</td>
+                <td class="text-right">@item.BloodLocation</td>
+                <td class="text-right">@item.City.CityName</td>
+                <td class="text-right">@item.City.Gov.GovName</td>
+
+            </tr>
+        }
+    </table>
+</div>
+

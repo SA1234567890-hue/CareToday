@@ -1,0 +1,180 @@
+
+.navbar {
+    line-height: 10px;
+    /* position: fixed; */
+    width: 100%;
+    z-index: 9999;
+    height: 100px;
+}
+.navbar .search1 label{
+    font-weight:bolder;
+    align-content:center;
+        
+}
+.sec1 {
+    background-image: url("../images/9.jpg");
+    /*background-image: url(~/images/blood/9.jpg);*/
+    height: 660px;
+    background-size: cover;
+    padding-top: 150px;
+}
+ 
+.sec2{
+    /* background-color: rgb(236, 231, 231); */
+    /* height: 660px; */
+    background-size: cover;
+    padding:120px 20px ;
+    position: relative;
+  
+}
+.sec2 .row {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    padding-top: 20px;
+    text-align: end;
+}
+
+.sec2 .row .hi {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    /* padding-top: 20px; */
+    /* text-align: end;*/
+ }  
+
+@media only screen and (max-width:425px) {
+    .sec2 .hi{
+        /*display: flex;
+        flex-direction: row-reverse; */
+        display: block;
+        justify-content: space-around;
+        text-align: end;
+    }
+    /* .sec2 .row{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        text-align: end;
+    }   */
+}
+.sec2 .card{
+    width: 500px;
+}
+
+/* .sec3{
+    background-color: rgb(214, 218, 224);
+    height: 660px;
+    background-size: cover;
+    /* padding-top: 50px; */
+/* }  */
+.carousel{
+    margin-left: 220px;
+color: black;
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    nav img{
+  
+        width: 200px;
+        height: 70px;
+        /* padding-left: 200px; */
+        margin-left: 0px;
+    }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .card{
+        /* padding-left:0px; */
+        margin: 20px 100px;
+    }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .card{
+        /* padding-left:0px; */
+        margin: 20px 0px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+
+.sec3{
+    display: flex;
+    
+    height: 600px;
+    width: 100%;
+   
+    background-color: rgb(226, 225, 222);
+    margin-bottom: 200px;
+}
+
+.sec3 .row {
+    
+    padding: 50px 50px 70px 50px;
+    margin: auto;
+    width: 40%;
+    height: 570px;
+    background-color: rgb(138, 138, 218);
+    margin-top:90px ;
+    margin-bottom: 50px;
+}
+.sec3 .row h2{
+    color: black;
+    font-size: 22pt;
+    /* margin: auto; */
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    padding-bottom: 20px;
+    margin-left:110px ;
+}
+.sec3 .row input{
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+.sec3 .btn{
+    margin: auto;
+    padding-right: 20px;
+    margin-bottom: 70px;
+}
+
+.sec3_pic {
+    width: 45%;
+    height: 600px;
+    margin: 0px;
+    margin-left: -15px;
+    background-color: rgba(0, 0, 0, 0.945);
+    background-image: url("../images/7.jpg");
+    /*background-image: url('~/images/blood/7.jpg');*/
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:400px) {
+    
+}

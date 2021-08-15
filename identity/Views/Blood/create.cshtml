@@ -1,0 +1,31 @@
+﻿@model identity.Models.BloodBank
+@{
+    ViewData["Title"] = "index";
+}
+
+<form method="post">
+    <h4>Create a new account.</h4>
+    <hr />
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        @Html.LabelFor(n => n.BloodType)
+        @Html.TextBoxFor(n => n.BloodType, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(n => n.BloodCost)
+        @Html.TextBoxFor(n => n.BloodCost, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(n => n.BloodPhone)
+        @Html.TextBoxFor(n => n.BloodPhone, new { @class = "form-control" });
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(n => n.BloodLocation)
+        @Html.TextBoxFor(n => n.BloodLocation, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(n => n.BloodDescription)
+        @Html.TextBoxFor(n => n.BloodDescription, new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<div class="search justify-content-end " style="margin: auto; width: 100%; border: 2px solid black">
+    <table class="table table-bordered w-100  justify-content-end">
+        @*<caption> أنابيب الأكسجين</caption>*@
+        <tr class="flex-row align-content-center">
+            <th class="text-center"> رقم التلفون</th>
+            <th class="text-center">  كميه الأكسجين</th>
+            <th class="text-center"> نوع انبوبه الاكسجين</th>
+            <th class="text-center">   التكلفة</th>
+            <th class="text-center">الموقع    </th>
+            <th class="text-center">المدينة   </th>
+            <th class="text-center">المحافظه</th>
+        </tr>
+        @foreach (var item in (List<OxygenTube>)ViewBag.o)
+        {
+            <tr class="flex-row align-content-center">
+                <td class="text-right">@item.OxgnPhone</td>
+                <td class="text-right">@item.OxgnAmount</td>
+                <td class="text-right">@item.OxgnType</td>
+                <td class="text-right">@item.OxgnCost</td>
+                <td class="text-right">@item.OxgnLocation</td>
+                <td class="text-right">@item.City.CityName</td>
+                <td class="text-right">@item.City.Gov.GovName</td>
+            </tr>
+        }
+    </table>
+</div>
+

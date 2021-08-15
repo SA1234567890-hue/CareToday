@@ -1,0 +1,46 @@
+﻿@* ------------------------------------------------------------------------ *@
+@model SelectList
+@{
+    ViewData["Title"] = "test";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/BloodBank/_layoutblood.cshtml";
+}
+<div class="input-group  justify-content-end  search1">
+    <div class="row flex-row-reverse">
+        <div class="col">
+            <label for="gov" class="form-label">المحافظة</label>
+            <input class="form-control " list="a" id="gov" name="sel" placeholder="...أكتب للبحث عن المحافظة">
+            <datalist id="a">
+                @*@Html.DropDownList("govid", Model, new { @class = "drop form-control text-center text justify-content-end" })*@
+                @foreach (var item in Model)
+                {
+                    <option value="@item.Text "> </option>
+                }
+            </datalist>
+        </div>
+        <div class="col">
+            <label for="in" class="form-label">المدينة</label>
+            <input class="form-control " list="d" id="in" name="sel" placeholder=" ...أكتب للبحث عن المدينة ">
+            <datalist id="d">
+            </datalist>
+        </div>
+    </div>
+</div>
+<!--style="width:700px;height:auto;align-content:center;margin:auto;border:2px solid black"-->
+@section data{
+    <div id="c" style="width:100%; font-weight:bolder;font-size:20pt ;background-color:white"> @*// load partial view for data*@ </div>
+}
+
+@section Scripts{
+    <script>
+        $("#gov").on("change", function () {
+            let id = $("#gov").val();
+            $("#d").load("/bloodbank/citydrop/" + id)
+        });
+
+        $("#in").on("input", function () {
+            let id = $("#in").val();
+            $("#c").load("/bloodbank/blood_search/" + id)
+        })
+    </script>
+}
